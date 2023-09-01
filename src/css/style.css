@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: #333;
+    color: #ffe100;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    & img{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 30%;
+        height: 120px;
+        object-fit: cover;
+        object-position: left;
+    }
+    & h1{
+        position: relative;
+        width: 100%;
+        text-shadow: 4px 2px #333, -4px -2px #333;
+    }
+}
+nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #212529;
+    @media (min-width: 350px){
+        padding: 15px 20px;
+    }
+    & ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        & li {
+            padding: 10px;
+            @media (min-width: 350px){
+                display: inline;
+            }
+            & a {
+                opacity: 0.5;
+                text-decoration: none;
+                color: #fff;
+            }
+            .hover:hover{
+                opacity: 0.8;
+            }
+            .active{
+                opacity: 1;
+            }
+        }
+    }
+}
+main {
+    padding: 20px;
+    .noticiasVer{    
+        width: 95%;
+        text-align: center;
+        padding: 9px 0;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+        .noticia{
+            outline: 2px solid #000;
+            background-color: white;
+            padding-bottom: 6px;
+            & img{
+                width: 100%;
+                top: 0;
+                height: 200px;
+                object-fit: cover;
+            }
+            & h3{
+                width: 100%;
+                color: #212529;
+            }
+            & a{
+                font-weight: bold;
+                background-color: #ffe100;
+                color: #000;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            & a:hover{
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+    & section{
+        & h2{
+            font-size: 40px;
+            color: #ffe100;
+            text-shadow: 4px 1px #000, -4px -1px #000;
+        }
+        & p{
+            font-size: 17px;
+        }
+        & ul{
+            background-color: #fbf6d0;
+            padding: 15px;
+            & li{
+                margin-left: 20px;
+                list-style-type: circle;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 19px;
+    text-align: right;
+    padding: 20px;
+}
